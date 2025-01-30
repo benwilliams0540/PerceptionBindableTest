@@ -40,9 +40,6 @@ struct Timers {
 
             case .timerTicked:
                 state.secondsElapsed += 1
-                if state.secondsElapsed.isMultiple(of: 3) {
-                    state.child.title = "\(state.secondsElapsed)"
-                }
                 return .none
 
             case .toggleTimerButtonTapped:
